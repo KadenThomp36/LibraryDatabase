@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="495.0" prefWidth="342.0" style="-fx-background-color: #3b3d40;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ReturnBook">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="495.0" prefWidth="342.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="342.0" style="-fx-background-color: #c96b18;" text="Return Book">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label text="Quck Book Search" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtBookSearch" onKeyReleased="#SearchBooks" prefHeight="26.0" prefWidth="188.0">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Click to select book" textFill="WHITE" underline="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <ListView fx:id="lstBookList" onMouseClicked="#PlaceBookID" prefHeight="82.0" prefWidth="342.0">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </VBox.margin>
+            </ListView>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="342.0" spacing="10.0">
+               <children>
+                  <Label text="Book ID" textFill="WHITE" />
+                  <TextField fx:id="txtBookID" prefHeight="26.0" prefWidth="92.0" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#ReturnSelectedBook" style="-fx-background-color: #4d6f82;" text="Return Book" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="118.0" prefWidth="342.0">
+               <children>
+                  <Label fx:id="lblMessageLabel" text="Output" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

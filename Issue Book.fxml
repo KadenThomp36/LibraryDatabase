@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #3b3d40;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.IssueBook">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="513.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #c96b18;" text="Issue Book">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="23.0" prefWidth="600.0" spacing="150.0">
+               <children>
+                  <Label text="Quck Book Search" textFill="WHITE" />
+                  <Label text="Quick User Search" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" spacing="100.0">
+               <children>
+                  <TextField fx:id="txtBookSearch" onKeyReleased="#SearchBooks" promptText="Name of Book" />
+                  <TextField fx:id="txtUserSearch" onKeyReleased="#SearchUsers" promptText="Name Of User" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="23.0" prefWidth="600.0" spacing="140.0">
+               <children>
+                  <Label text="Click to select book ID" textFill="WHITE" underline="true" />
+                  <Label text="Click to select User ID" textFill="WHITE" underline="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="84.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <ListView fx:id="lstBookList" onMouseClicked="#PlaceBookID" prefHeight="84.0" prefWidth="282.0" />
+                  <ListView fx:id="lstUserList" onMouseClicked="#PlaceUserID" prefHeight="84.0" prefWidth="282.0" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="56.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label text="Book ID" textFill="WHITE" />
+                  <TextField fx:id="txtBookID" prefHeight="26.0" prefWidth="72.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label text=" User ID" textFill="WHITE" />
+                  <TextField fx:id="txtUserID" prefHeight="26.0" prefWidth="72.0" />
+               </children>
+            </HBox>
+            <Button fx:id="btnIssueBook" alignment="CENTER" mnemonicParsing="false" onAction="#CreateTransaction" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: #4d6f82;" text="Issue Book" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblMessageLabel" text="Output" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

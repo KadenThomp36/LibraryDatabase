@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="306.0" prefWidth="347.0" style="-fx-background-color: #3b3d40;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.IssuedBooksTable">
+   <children>
+      <VBox layoutY="8.0" prefHeight="310.0" prefWidth="539.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #c96b18;" text="Issued Books Table">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="bookID" prefWidth="89.60004043579102" text="Book ID" />
+                <TableColumn fx:id="userID" prefWidth="85.5999755859375" text="User ID" />
+                  <TableColumn fx:id="issueDate" prefWidth="322.3999816894531" text="Issue Date" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="40.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
